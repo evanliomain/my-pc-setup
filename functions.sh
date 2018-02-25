@@ -55,6 +55,14 @@ install_deb()
 install_package()
 {
   PACKAGE=$1
+  if [ $# -eq 2 ]
+  then
+    REPOSITORY=$2
+    log "Add repository $REPOSITORY"
+    sudo add-apt-repository $REPOSITORY
+    sudo apt-get update
+  fi
+
   log "Install from apt-get $PACKAGE"
   sudo apt-get install $PACKAGE
 }
