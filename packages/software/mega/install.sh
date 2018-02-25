@@ -1,5 +1,11 @@
 #!/bin/bash
 
-wget https://mega.nz/linux/MEGAsync/xUbuntu_16.04/amd64/megasync-xUbuntu_16.04_amd64.deb
-sudo dpkg -i megasync-xUbuntu_16.04_amd64.deb
-rm megasync-xUbuntu_16.04_amd64.deb
+UBUNTU_VERSION=$(lsb_release -r | sed -e "s#Release:\t##")
+
+# Install some uncommon dependancies
+#sudo apt-get install -f libcrypto++9 libmediainfo0 libzen0
+
+wget https://mega.nz/linux/MEGAsync/xUbuntu_${UBUNTU_VERSION}/amd64/megasync-xUbuntu_${UBUNTU_VERSION}_amd64.deb
+#dpkg-deb --info megasync-xUbuntu_${UBUNTU_VERSION}_amd64.deb
+sudo dpkg -i megasync-xUbuntu_${UBUNTU_VERSION}_amd64.deb
+rm megasync-xUbuntu_${UBUNTU_VERSION}_amd64.deb
