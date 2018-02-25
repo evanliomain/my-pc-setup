@@ -3,7 +3,7 @@
 CONFIG_PATH=~/.config/Code/User
 
 mkdir -p $CONFIG_PATH
-cp ./config/* $CONFIG_PATH
+cp ./packages/software/vscode/config/* $CONFIG_PATH
 
 for extension in `cat ./packages/software/vscode/extensions-list.txt`
 do
