@@ -1,0 +1,152 @@
+{
+  // Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+  // Example:
+  "describe": {
+    "prefix": "describe",
+    "body": [
+      "describe('when ${1:something}', () => {",
+      "  ${2://TODO}",
+      "});"
+    ],
+    "description": "describe - unit tests"
+  },
+  "afterEach": {
+    "prefix": "afterEach",
+    "body": [
+      "afterEach(() => {",
+      "  ${1:// What is done after each test}",
+      "});"
+    ],
+    "description": "afterEach - unit tests"
+  },
+  "beforeEach": {
+    "prefix": "beforeEach",
+    "body": [
+      "beforeEach(() => {",
+      "  ${1:// What is done before each test}",
+      "});"
+    ],
+    "description": "beforeEach - unit tests"
+  },
+  "it": {
+    "prefix": "it",
+    "body": [
+      "it('${1:should expect something ...}', () => {",
+      "  ${2:// expect().to.be.something()}",
+      "});"
+    ],
+    "description": "it - unit tests"
+  },
+  "expect": {
+    "prefix": "ex",
+    "body": [
+      "expect($1).to.$2;"
+    ],
+    "description": "expect - unit tests"
+  },
+  "console.log": {
+    "prefix": "con",
+    "body": [
+      "console.log(${1});"
+    ],
+    "description": "console.log"
+  },
+  "import": {
+    "prefix": "im",
+    "body": [
+      "import ${moduleName} from '${path}';"
+    ],
+    "description": "import module"
+  },
+  "return": {
+    "prefix": "re",
+    "body": [
+      "return${0};"
+    ],
+    "description": "return"
+  },
+  "": {
+    "prefix": "",
+    "body": [
+    ],
+    "description": ""
+  },
+  "sinon.spy": {
+    "prefix": "spy",
+    "body": [
+      "sinon.spy()${1}"
+    ],
+    "description": "sinon.spy"
+  },
+  "sinon.stub": {
+    "prefix": "stub",
+    "body": [
+      "sinon.stub()${1}"
+    ],
+    "description": "sinon.stub"
+  },
+  "": {
+    "prefix": "",
+    "body": [
+    ],
+    "description": ""
+  },
+  "switch": {
+    "prefix": "swi",
+    "body": [
+      "switch(${1:expression}) {",
+      "case ${2:case1}:",
+      "  ${3:// What to do in case1}",
+      "  break;",
+      "default:",
+      "  ${4:// What to do by default}",
+      "}"
+    ],
+    "description": "switch"
+  },
+  "switch.case": {
+    "prefix": "cas",
+    "body": [
+      "case ${1:newCase}:",
+      "  ${3:// What to do in new case}",
+      "  break;"
+    ],
+    "description": "case (switch)"
+  },
+  "undefined": {
+    "prefix": "un",
+    "body": [
+      "undefined"
+    ],
+    "description": "undefined"
+  },
+  "promise.then": {
+    "prefix": "th",
+    "body": [
+      "then((${1:result}) => {",
+      "  ${2:// body}",
+      "});"
+    ],
+    "description": "then - promise"
+  },
+  "promise.catch": {
+    "prefix": "cat",
+    "body": [
+      "catch((${1:rejection}) => {",
+      "  ${2:// body}",
+      "});"
+    ],
+    "description": "catch - promise"
+  },
+  "promise.finally": {
+    "prefix": "fin",
+    "body": [
+      "finally((${1:rejection}) => {",
+      "  ${2:// body}",
+      "});"
+    ],
+    "description": "finally - promise"
+  }
+}

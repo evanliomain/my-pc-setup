@@ -1,7 +1,88 @@
-// Placez vos combinaisons de touches dans ce fichier pour remplacer les valeurs par défaut
+// Place your key bindings in this file to overwrite the defaults
 [
-    {
-        "key": "ctrl+shift+s",
-        "command": "workbench.action.files.saveAll"
-    }
+ { "key": "ctrl+shift+s",   "command": "workbench.action.files.saveAll" }
+,{ "key": "ctrl+shift+a",   "command": "extension.align",
+                               "when": "editorTextFocus" }
+,{ "key": "ctrl+!",       "command": "editor.action.blockComment",
+                               "when": "editorTextFocus" }
+,{ "key": "ctrl+e",         "command": "expand_region",
+                               "when": "editorTextFocus" }
+,{ "key": "ctrl+/",       "command": "editor.action.commentLine",
+                               "when": "editorTextFocus" }
+//,{ "key": "f1",         "command": "workbench.action.toggleSidebarVisibility" }
+,{ "key": "f1",              "command": "workbench.action.toggleZenMode" }
+,{ "key": "f1",              "command": "workbench.action.exitZenMode",
+                                "when": "inZenMode" }
+
+,{ "key": "ctrl+k u",          "command": "extension.changeCase.constant",
+                                  "when": "editorTextFocus" }
+,{ "key": "ctrl+k l",          "command": "extension.changeCase.snake",
+                                  "when": "editorTextFocus" }
+,{ "key": "ctrl+k p",          "command": "extension.changeCase.param",
+                                  "when": "editorTextFocus" }
+,{ "key": "ctrl+k c",          "command": "extension.changeCase.camel",
+                                  "when": "editorTextFocus" }
+
+
+,{ "key": "ctrl+j",          "command": "editor.action.joinLines",
+                                "when": "editorTextFocus" }
+
+// Folding
+,{ "key": "ctrl+numpad_subtract",       "command": "editor.fold",
+                                           "when": "editorFocus" }
+,{ "key": "ctrl+shift+numpad_subtract", "command": "editor.foldAll",
+                                           "when": "editorFocus" }
+,{ "key": "ctrl+numpad_add",            "command": "editor.unfold",
+                                           "when": "editorFocus" }
+,{ "key": "ctrl+shift+numpad_add",      "command": "editor.unfoldAll",
+                                           "when": "editorFocus" }
+,{ "key": "ctrl+shift+l",            "command": "smart.splitIntoLines",
+                                        "when": "editorTextFocus" }
+
+// Navigation between groups
+,{ "key": "alt+left",  "command": "workbench.action.focusFirstEditorGroup" }
+,{ "key": "alt+right", "command": "workbench.action.focusSecondEditorGroup" }
+// ,{ "key": "ctrl+3", "command": "workbench.action.focusThirdEditorGroup"  }
+
+,{
+  "key": "ctrl+alt+meta+up", "command": "incrementor.incByTenth",
+  "when": "editorTextFocus"
+}
+
+,{
+  "key": "ctrl+alt+meta+down", "command": "incrementor.decByTenth",
+  "when": "editorTextFocus"
+}
+,{
+  "key": "ctrl+shift+meta+up", "command": "incrementor.incByTen",
+  "when": "editorTextFocus"
+}
+,{
+  "key": "ctrl+shift+meta+down", "command": "incrementor.decByTen",
+  "when": "editorTextFocus"
+}
+,{
+  "key": "ctrl+meta+right", "command": "incrementor.incByOneX",
+  "when": "editorTextFocus"
+}
+,{
+  "key": "ctrl+meta+left", "command": "incrementor.decByOneX",
+  "when": "editorTextFocus"
+}
+,{
+  "key": "ctrl+alt+meta+right", "command": "incrementor.incByTenthX",
+  "when": "editorTextFocus"
+}
+,{
+  "key": "ctrl+alt+meta+left", "command": "incrementor.decByTenthX",
+  "when": "editorTextFocus"
+}
+,{
+  "key": "ctrl+shift+meta+right", "command": "incrementor.incByTenX",
+  "when": "editorTextFocus"
+}
+,{
+  "key": "ctrl+shift+meta+left", "command": "incrementor.decByTenX",
+  "when": "editorTextFocus"
+}
 ]

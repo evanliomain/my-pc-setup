@@ -1,0 +1,151 @@
+{
+  // Place your settings in this file to overwrite the default settings
+  // Controls the rendering size of tabs in characters. Accepted values: "auto", 2, 4, 6, etc. If set to "auto", the value will be guessed when a file is opened.
+  "editor.tabSize": 2,
+  // Controls whether the editor should render whitespace characters
+  "editor.renderWhitespace": "all",
+  // Controls visibility of the glyph margin
+  "editor.glyphMargin": true,
+  // Dont work Today
+  "editor.rulers": [
+    80
+  ],
+  // When enabled, will trim trailing whitespace when you save a file.
+  "files.trimTrailingWhitespace": true,
+  // Configure glob patterns for excluding files and folders.
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/build": true,
+    "**/.tmp": true,
+    "**/tmp": true,
+    "**/.meteor": true,
+    "**/platforms": true,
+    "**/coverage": true,
+    "**/node_modules.bak": true
+  },
+  // Controls whether snippets are shown with other suggestions and how they are sorted.
+  "editor.snippetSuggestions": "bottom",
+  // Insert snippets when their prefix matches. Works best when 'quickSuggestions' aren't enabled.
+  "editor.tabCompletion": true,
+  // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the file.exclude setting.
+  "search.exclude": {
+    "**/dist": false,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/fake_backend": false,
+    "**/misc": true,
+    "**/vendors": true,
+    "vendors/**": true
+  },
+  "editor.renderIndentGuides": true,
+  "editor.mouseWheelZoom": true,
+  //-------- Run On Save command configuration. --------
+  // ${workspaceRoot}: workspace root folder
+  // ${file}: path of saved file
+  // ${fileBasename}: saved file's basename
+  // ${fileDirname}: directory name of saved file
+  // ${fileExtname}: extension (including .) of saved file
+  // ${fileBasenameNoExt}: saved file's basename without extension
+  // ${cwd}: current working directory
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        //   "match": "\\.js$",
+        //   "isAsync": false,
+        //   "cmd": "/home/evan/bin/filejs_onSave.sh ${file}"
+        // }, {
+        "match": "\\.js$",
+        "isAsync": false,
+        "cmd": "${workspaceRoot}/node_modules/.bin/jscs ${file} --fix --config=${workspaceRoot}/.jscsrc"
+      },
+      {
+        // Remove unecessary empty lines at the end of the file
+        "match": ".*",
+        "isAsync": false,
+        "cmd": "/home/evan/bin/file_onSave.sh ${file}"
+        // }, {
+        //   "match": ".ts$",
+        //   "isAsync": false,
+        //   "cmd": "${workspaceRoot}/node_modules/.bin/tslint ${file} --fix --config ${workspaceRoot}/.tslint.json"
+      }
+    ]
+  },
+  "tslint.enable": true,
+  "eslint.options": {
+    //"rulePaths" : ["eslint-rules"]
+  },
+  // Configures if the built-in HTML language support suggests Angular V1 tags and properties.
+  "html.suggest.angular1": false,
+  // Configures if the built-in HTML language support suggests Ionic tags, properties and values.
+  "html.suggest.ionic": false,
+  // Configures if the built-in HTML language support suggests HTML5 tags, properties and values.
+  "html.suggest.html5": true,
+  "emmet.syntaxProfiles": {
+    "javascript": "html"
+  },
+  "extensions.autoUpdate": true,
+  "files.insertFinalNewline": true,
+  "editor.renderLineHighlight": "all",
+  "eslint.autoFixOnSave": true,
+  "editor.minimap.enabled": true,
+  "alignment.chars": {
+    ":": {
+      "spaceBefore": 1,
+      "spaceAfter": 1
+    },
+    "::": {
+      "spaceBefore": 0,
+      "spaceAfter": 0
+    },
+    "=": {
+      "spaceBefore": 1,
+      "spaceAfter": 1
+    },
+    "===": {
+      "spaceBefore": 1,
+      "spaceAfter": 1
+    },
+    "==": {
+      "spaceBefore": 1,
+      "spaceAfter": 1
+    },
+    "=>": {
+      "spaceBefore": 1,
+      "spaceAfter": 1
+    },
+    "+=": {
+      "spaceBefore": 1,
+      "spaceAfter": 1
+    },
+    "-=": {
+      "spaceBefore": 1,
+      "spaceAfter": 1
+    },
+    "*=": {
+      "spaceBefore": 1,
+      "spaceAfter": 1
+    },
+    "/=": {
+      "spaceBefore": 1,
+      "spaceAfter": 1
+    }
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "window.zoomLevel": -1,
+  "extensions.ignoreRecommendations": true,
+  "tslint.autoFixOnSave": false,
+  "tslint.nodePath": "/home/evan/workspace/rd/fdl4c-ui/node_modules",
+  "eslint.enable": false,
+  "editor.autoIndent": false,
+  "csharp.suppressDotnetInstallWarning": true,
+  "csharp.suppressDotnetRestoreNotification": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "vsicons.presets.jsOfficial": true,
+  "vsicons.presets.tsOfficial": true,
+  "vsicons.presets.hideFolders": true,
+  "editor.formatOnSave": false,
+  "vsicons.projectDetection.autoReload": true,
+  "search.smartCase": true,
+  "diffEditor.ignoreTrimWhitespace": false
+}
