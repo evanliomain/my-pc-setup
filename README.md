@@ -6,6 +6,7 @@ A fancy way to fast setup my pc
 
 ```sh
 sudo apt-get install git
+cd ~
 git clone https://github.com/evanliomain/my-pc-setup.git .my-pc-setup
 cd .my-pc-setup
 ./install-all.sh
@@ -36,4 +37,14 @@ To just configure several specific software
 ## List available software
 ```sh
 ./list.sh
+```
+
+## Save software configuration
+To save a software configuration
+```sh
+./save-config.sh my-software
+```
+To save several software configuration
+```sh
+./save-config.sh my-software my-software-2 my-software-3
 ```
