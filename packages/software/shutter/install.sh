@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt-get install shutter
+install_package shutter
