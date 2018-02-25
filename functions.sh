@@ -12,6 +12,12 @@ log_step()
   echo -e "$ACCENT_COLOR-- $MESSAGE$RETURN_COLOR"
 }
 
+log()
+{
+  MESSAGE=$1
+  echo -e "$SECONDARY_COLOR--> source $MESSAGE$RETURN_COLOR"
+}
+
 execute_file()
 {
   FILE=$1
@@ -31,4 +37,17 @@ usage()
   SCRIPT=$1
   MESSAGE=$2
   echo -e "$WARNING_COLOR$SCRIPT $MESSAGE$RETURN_COLOR"
+}
+
+install_deb()
+{
+  URL=$1
+  DEB_FILE=$2
+
+  log "Download $URL/$DEB_FILE"
+  wget $URL/$DEB_FILE
+  log "Install $DEB_FILE"
+  sudo dpkg -i $DEB_FILE
+  log "Remove $DEB_FILE"
+  rm $DEB_FILE
 }
