@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source ../../../functions.sh
-
 UBUNTU_VERSION=$(lsb_release -r | sed -e "s#Release:\t##")
 
 # Install some uncommon dependancies
