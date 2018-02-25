@@ -15,7 +15,7 @@ log_step()
 log()
 {
   MESSAGE=$1
-  echo -e "$SECONDARY_COLOR--> source $MESSAGE$RETURN_COLOR"
+  echo -e "$SECONDARY_COLOR--> $MESSAGE$RETURN_COLOR"
 }
 
 execute_file()
@@ -46,8 +46,15 @@ install_deb()
 
   log "Download $URL/$DEB_FILE"
   wget $URL/$DEB_FILE
-  log "Install $DEB_FILE"
+  log "Install from .deb $DEB_FILE"
   sudo dpkg -i $DEB_FILE
   log "Remove $DEB_FILE"
   rm $DEB_FILE
+}
+
+install_package()
+{
+  PACKAGE=$1
+  log "Install from apt-get $PACKAGE"
+  sudo apt-get install $PACKAGE
 }

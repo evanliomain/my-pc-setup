@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt-get install screenruler
+install_package screenruler

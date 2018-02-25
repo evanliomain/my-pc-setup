@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt-get install gpick
+install_package gpick
