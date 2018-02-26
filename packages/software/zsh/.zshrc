@@ -93,3 +93,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source ~/.my-pc-setup/packages/software/zsh/config/.bash_aliases
+source ~/.my-pc-setup/packages/software/zsh/config/.git_aliases
+source ~/.my-pc-setup/packages/software/zsh/config/.project_aliases

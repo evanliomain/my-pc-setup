@@ -1,0 +1,7 @@
+# Project alias
+
+alias pfind='find . * | sort -u | grep'
+
+alias nversion='grep "^ *\"version" node_modules/*/package.json | sed "s#^node_modules/\([^/]*\)/package.json: *\"version\" *: *\"\([^\"]*\)\".*\$#\1 : \2#" | grep'
+
+alias bversion='grep -P "^[\t ]*\"version" bower_components/*/.bower.json | sed "s#^app/bower_components/\([^/]*\)/\.bower.json: *\"version\" *: *\"\([^\"]*\)\".*\$#\1 : \2#" | grep'

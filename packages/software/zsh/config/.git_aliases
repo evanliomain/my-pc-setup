@@ -1,0 +1,56 @@
+# Git User alias
+
+# To ls and grep
+# Get the current branch name
+alias gwhere='git rev-parse --abbrev-ref HEAD'
+
+# Get all branch name
+alias glist='git branch'
+
+alias gstatus='git status'
+alias gco='git checkout'
+alias gpull='git pull --rebase'
+alias gpush='git push origin $(gwhere)'
+alias gdiff='git diff'
+
+alias gamend='git commit --amend'
+alias gpop='git stash pop'
+alias gstash='git stash save -u'
+alias glast='git log | grep ^commit | head -1 | sed "s#^commit \(.*\)#\1#"'
+alias gshowlast='git show $(git log | grep ^commit | head -1 | sed "s#^commit \(.*\)#\1#")'
+#alias gstandup='git log --pretty=format:"%s" --graph --all --author=$USER --since=1.days'
+alias gstandup='~/.my-pc-setup/bin/git_standup.sh'
+
+# Reset last commit
+alias gundo='git reset --soft HEAD~1'
+alias gunadd='git reset HEAD'
+
+#Cancel a merge
+alias gmcancel="git reset --merge ORIG_HEAD"
+
+# Short alias
+alias gt='git status'
+alias gc='git checkout'
+alias gp='git pull --rebase'
+alias gd='git diff'
+alias gs='git stash'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gw='git rev-parse --abbrev-ref HEAD'
+
+## go back to master
+alias gcm='git checkout master'
+alias gcd='git checkout develop'
+
+## go to develop, rebase and create new branch
+alias gn='git checkout develop; git pull --rebase; git checkout -b'
+
+## Custom git script
+
+## renaming branch
+alias gbrename='~/.my-pc-setup/bin/git_branch_rename.sh'
+
+## switching branch
+alias gbs='~/.my-pc-setup/bin/git_branch_switch.sh'
+
+## search commit
+alias gsearch='~/.my-pc-setup/bin/git_commit_search.sh'
