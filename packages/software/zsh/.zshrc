@@ -9,6 +9,9 @@ export ZSH=/home/evan/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+
+
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -59,13 +62,18 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git,
+  git
   zsh-autosuggestions
+  autojump
+  ng
+  npm
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+DEFAULT_USER="evan"
+prompt_context(){}
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -99,3 +107,5 @@ source ~/.my-pc-setup/packages/software/zsh/config/.project_aliases
 
 # Load profile
 source ~/.my-pc-setup/packages/software/zsh/config/.bash_profile
+
+
