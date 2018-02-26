@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/evan/.oh-my-zsh
+export ZSH=/home/evan/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -96,3 +96,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/.my-pc-setup/packages/software/zsh/config/.bash_aliases
 source ~/.my-pc-setup/packages/software/zsh/config/.git_aliases
 source ~/.my-pc-setup/packages/software/zsh/config/.project_aliases
+
+# Load profile
+source ~/.my-pc-setup/packages/software/zsh/config/.bash_profile
