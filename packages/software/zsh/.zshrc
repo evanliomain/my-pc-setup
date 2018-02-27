@@ -1,6 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Added by n-install (see http://git.io/n-install-repo).
+export N_PREFIX="$HOME/n"
+export PATH=$N_PREFIX/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/evan/.oh-my-zsh
 
