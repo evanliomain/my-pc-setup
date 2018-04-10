@@ -25,7 +25,7 @@ alias psg='ps -fu $USER | grep -v grep | grep'
 # Video
 alias show='vlc -f'
 alias sub='subliminal -lfr *'
-
+alias video2audio='~/.my-pc-setup/bin/video2audio.sh'
 
 # Bpm
 alias bpmwrap='~/.my-pc-setup/bin/bpmwrap/bpmwrap.sh'
